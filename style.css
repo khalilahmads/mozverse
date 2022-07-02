@@ -117,6 +117,8 @@ header nav ul .sub-menu-3 {
 
 header nav ul li.active ul {
     display: block;
+    max-height: 100vh;
+    overflow: auto;
 }
 
 header nav ul li i.active {
@@ -197,52 +199,24 @@ header nav .sub-menu-item {
     Carousel Slider section
  ============================================= */
 
-#carousel-section {
-    padding: 150px 0 100px;
-}
-
-#carousel-section .big-img {
-    position: absolute;
-}
 
 
-
-
-
-.card {
-    background: #fff;
-    border-radius: 15px;
-    position: relative;
-    margin: 70px 0;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.card:hover {
-    transform: translateY(-25px);
-    transition: 0.5s;
-}
-
-.card .card-content {
-    padding: 25px;
-    line-height: 28px;
-    z-index: 8;
-}
-
-.image {
-    margin-top: 30px;
-    padding-top: 10px;
-    border-top: 1px solid #ababad9a;
-    border-width: 80%;
-}
 
 /* ===========================================
     Carousel Slider section
  ============================================= */
+.big-img {
+    z-index: -1;
+    margin-bottom: -500px;
+    margin-top: 80px;
+}
 
 .body {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 24rem;
+    margin-bottom: 5rem;
 }
 
 .slide-container {
@@ -259,7 +233,6 @@ header nav .sub-menu-item {
 
 .card {
     border-radius: 25px;
-    background-color: #FFF;
 }
 
 .image-content,
@@ -272,79 +245,39 @@ header nav .sub-menu-item {
 
 .image-content {
     position: relative;
+    width: 90%;
+    margin: 0 auto;
     row-gap: 5px;
-    padding: 25px 0;
+    padding: 17px 0;
+    border-top: 1px solid rgb(224, 218, 218);
 }
 
-.overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #4070F4;
-    border-radius: 25px 25px 0 25px;
-}
-
-.overlay::before,
-.overlay::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: -40px;
-    height: 40px;
-    width: 40px;
-    background-color: #4070F4;
-}
-
-.overlay::after {
-    border-radius: 0 25px 0 0;
-    background-color: #FFF;
-}
 
 .card-image {
     position: relative;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
     background: #FFF;
     padding: 3px;
 }
 
-.card-image .card-img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #4070F4;
-}
-
-.name {
-    font-size: 18px;
-    font-weight: 500;
-    color: #333;
-}
 
 .description {
-    font-size: 14px;
-    color: #707070;
-    text-align: center;
+    font-size: 18px;
+    padding: 10px 0 45px;
 }
 
-.button {
-    border: none;
-    font-size: 16px;
-    color: #FFF;
-    padding: 8px 16px;
-    background-color: #4070F4;
-    border-radius: 6px;
-    margin: 14px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.card-img {
+    width: 50%;
 }
 
-.button:hover {
-    background: #265DF2;
+img.card-img.time {
+    width: 80%;
+    position: relative;
+    left: -85px;
+}
+
+.republic-coin {
+    margin-left: -80px;
+    width: 80%;
 }
 
 .swiper-navBtn {
@@ -599,8 +532,8 @@ header nav .sub-menu-item {
 
 .market img {
     border-radius: 20px;
-    width: 100%;
-    height: 365px;
+    width: 471px;
+    aspect-ratio: 100/70;
 }
 
 .market a {
@@ -620,20 +553,24 @@ header nav .sub-menu-item {
 .animateable-text-box .right {
     color: #000;
     font-weight: 500;
-    white-space: pre;
+    width: 94%;
+    word-wrap: break-word;
+    letter-spacing: .6px;
 
 }
 
+.meta-data {
+    color: green;
+}
 
 .transparent {
     background-color: rgba(190, 181, 211, .1);
-    margin: 0 4rem 0 5rem;
+    margin: 0 3.5% 0 5.8%;
     border-radius: 20px;
     z-index: -1;
     position: relative;
-    bottom: 50px;
-    min-height: 445px;
-    bottom: 453px;
+    min-height: 400px;
+    bottom: 411px;
 }
 
 /* ===========================================
@@ -643,8 +580,9 @@ header nav .sub-menu-item {
 .mozverse-section {
     position: relative;
     z-index: -2;
-    bottom: 600px;
+    bottom: 520px;
     padding-top: 5.5rem;
+    padding-bottom: 10rem;
 }
 
 .mozverse-content-box {
@@ -657,7 +595,6 @@ header nav .sub-menu-item {
 }
 
 .box3 {
-    display: inline-block;
     width: 650px;
     padding: 30px 0 0 30px;
 }
@@ -689,7 +626,7 @@ header nav .sub-menu-item {
     background-position: center center;
     background-size: cover;
     position: relative;
-    bottom: 730px;
+    bottom: 600px;
     background: white;
 }
 
@@ -775,7 +712,7 @@ header nav .sub-menu-item {
     margin: 0 auto;
     border-radius: 40px;
     position: relative;
-    bottom: 600px;
+    bottom: 580px;
 }
 
 .web-3-content h1 {
@@ -792,7 +729,26 @@ header nav .sub-menu-item {
 
 .web-3-img {
     position: relative;
-    bottom: 120px;
+    bottom: 140px;
+}
+
+.web-img-1,
+.web-img-2,
+.web-img-3 {
+
+    position: absolute;
+}
+
+.web-img-1 {
+    bottom: 170px;
+}
+
+.web-img-2 {
+    bottom: 145px;
+}
+
+.web-img-3 {
+    bottom: 150px;
 }
 
 /* ===========================================
@@ -800,15 +756,22 @@ header nav .sub-menu-item {
  ============================================= */
 .news-section {
     position: relative;
-    bottom: 340px;
+    bottom: 444px;
 }
 
+.images-anim-container {
+    background: rgba(227, 224, 224, 0.615);
+    min-height: 80vh;
+    position: relative;
+}
 
 .news-section .background {
     min-height: 330px;
     background: linear-gradient(222.78deg, rgba(111, 39, 146, .2) -3.76%, rgba(35, 16, 44, .2) 101.47%), linear-gradient(180deg, rgba(36, 41, 53, .59), rgba(28, 33, 45, .1829)), #131a23;
     box-shadow: 6px 6px 16px rgb(209 205 199 / 50%), -6px -6px 16px rgb(255 255 255 / 50%);
     border-radius: 30px;
+    position: relative;
+    top: 100px;
 }
 
 .news-section .updates-form {
@@ -834,7 +797,7 @@ header nav .sub-menu-item {
 .news-section .form-input-box input {
     display: block;
     width: 320px;
-    padding-right: 20px;
+    padding-left: 15px;
     height: 45px;
     border-radius: 5px;
     border: none;
@@ -864,6 +827,83 @@ header nav .sub-menu-item {
     border-bottom: 1px solid #8d8cad;
 }
 
+.cube {
+    position: absolute;
+}
+
+.cube-1 {
+    top: 20px;
+    left: 139px;
+}
+
+.cube-2 {
+    right: 270px;
+    top: 10px;
+}
+
+.cube-3 {
+    left: 60px;
+    bottom: 10px;
+}
+
+.cube-4 {
+    right: 20px;
+    bottom: -145px;
+}
+
+
+
+.cube-1,
+.cube-4 {
+    animation-name: rotateme;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotateme {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.cube-2,
+.cube-3 {
+    animation-name: rotatemeinv;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotatemeinv {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-90deg);
+    }
+
+    50% {
+        transform: rotate(-180deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
 
 /* ===========================================
     Footer section
@@ -925,7 +965,7 @@ footer .content .link-boxes {
     font-size: 14px;
     background: rgba(150, 69, 217, .1);
     border-radius: 20px;
-    padding: 3px 3px 2px 3px;
+    padding: 3px 5px;
 }
 
 .link_name {
@@ -1076,15 +1116,6 @@ footer .bottom-details .bottom_text {
         display: flex;
     }
 
-    .animateable-text-box .right {
-        white-space: normal;
-    }
-
-    .animateable-text-box .right .code {
-        margin-top: 25px;
-        font-size: 15px;
-    }
-
     .mozverse-content-box .box2 {
         width: 100%;
     }
@@ -1131,7 +1162,7 @@ footer .bottom-details .bottom_text {
 
     .web-3-img {
         bottom: 0;
-        margin-top: -160px;
+        margin-top: -115px;
     }
 
     .web-3-content {
@@ -1160,6 +1191,24 @@ footer .bottom-details .bottom_text {
         margin-right: 0;
         padding: 35px 25px;
 
+    }
+
+    .market img {
+        width: 100%;
+        aspect-ratio: 100/60;
+    }
+
+
+    .web-img-1 {
+        bottom: 60px;
+    }
+
+    .web-img-2 {
+        bottom: 60px;
+    }
+
+    .web-img-3 {
+        bottom: 40px;
     }
 
 }
@@ -1289,6 +1338,10 @@ footer .bottom-details .bottom_text {
     .section-img-box video {
         width: 100%;
     }
+
+    .news-section .background {
+        left: 12px;
+    }
 }
 
 @media (max-width: 900px) {
@@ -1325,5 +1378,110 @@ footer .bottom-details .bottom_text {
 
     footer .content .link-boxes .box {
         width: calc(100% / 2 - 10px);
+    }
+
+    .box3 {
+        width: 100%;
+        padding: 30px 0 0 30px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .box3 {
+        width: 100%;
+        padding: 30px 0 0 30px;
+    }
+
+    .quot {
+        padding: 0;
+    }
+
+    .meta {
+        width: 400px;
+    }
+
+    .meta p {
+        padding: 20px 0;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    img[src="./images/scheme-circles.png"] {
+        width: 70%;
+    }
+
+    .web-3-content h1 {
+        font-size: 31px;
+        line-height: 45px;
+        margin-bottom: 18px;
+    }
+
+    .web-3-img {
+        margin-top: -55px;
+    }
+
+    .web-img-1,
+    .web-img-3 {
+        bottom: 40px;
+    }
+
+    .web-img-2 {
+        bottom: 60px;
+    }
+
+    .news-section .background {
+        left: 15px;
+        margin: 0px 16px;
+    }
+
+    .news-section .updates-form {
+        padding: 5px;
+    }
+
+    .news-section .form-input-box {
+        margin-left: 11px;
+    }
+}
+
+/* ===========================================
+    Footer section
+ ============================================= */
+
+
+.web-img-3 {
+    animation-name: upanddown;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.web-img-2 {
+    animation-name: upanddown;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.web-img-1 {
+    animation-name: upanddown;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@-webkit-keyframes upanddown {
+    0% {
+        -webkit-transform: translateY(-40px);
+        transform: translateY(-40px);
+    }
+
+    50% {
+        -webkit-transform: translateY(-25px);
+        transform: translateY(-25px);
+    }
+
+    100% {
+        -webkit-transform: translateY(-40px);
+        transform: translateY(-40px);
     }
 }
